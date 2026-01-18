@@ -176,6 +176,33 @@ header h1{font-size:18px;margin:0}
   background:#555;
   border-radius:3px
 }
+/* ===== DOWNLOAD BUTTON ===== */
+#downloadBtn{
+  position:absolute;
+  bottom:120px; /* nằm ngay trên strip (strip cao 100px) */
+  left:50%;
+  transform:translateX(-50%);
+  background:cyan;
+  color:#000;
+  border:2px solid #000;
+  padding:10px 24px;
+  font-weight:bold;
+  text-decoration:none;
+  border-radius:6px;
+  letter-spacing:1px;
+  z-index:25;
+  box-shadow:0 2px 8px rgba(0,0,0,.4);
+  pointer-events:auto;
+}
+
+#downloadBtn:hover{
+  filter:brightness(1.1);
+}
+
+#downloadBtn:active{
+  transform:translateX(-50%) scale(0.95);
+}
+
 </style>
 </head>
 
@@ -199,6 +226,14 @@ header h1{font-size:18px;margin:0}
   <div id="imageWrap">
     <img id="mainImage">
   </div>
+
+<a 
+  id="downloadBtn" 
+  href="https://www.baolongedu.site/huong-dan-thanh-toan" 
+  target="_blank"
+>
+  TẢI XUỐNG
+</a>
 
   <div id="thumbStrip"></div>
 </div>
