@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A4 - Hạ cỡ chữ nhỏ - Phương pháp viết chữ tròn li</title>
+<meta property="og:title" content="A4 - Hạ cỡ chữ nhỏ - Phương pháp viết chữ tròn li">
+<meta property="og:description" content="Tài liệu luyện chữ tròn li cho học sinh tiểu học">
+<meta property="og:image" content="https://lyvanquynh.github.io/hacotronli/thumb.jpg">
+<meta property="og:url" content="https://lyvanquynh.github.io/hacotronli/">
+<meta property="og:type" content="website">
+
+<meta name="twitter:card" content="summary_large_image">
 
 <style>
 html,body{
@@ -519,9 +526,25 @@ strip.addEventListener('mousemove',e=>{
 document.getElementById('prev').onclick=()=>slide(-1)
 document.getElementById('next').onclick=()=>slide(1)
 document.getElementById('close').onclick=close
+
+/* ===== KEYBOARD NAVIGATION (PC) ===== */
+document.addEventListener('keydown', e => {
+  if (viewer.style.display !== 'block') return
+
+  if (e.key === 'ArrowLeft') {
+    slide(-1)
+  }
+
+  if (e.key === 'ArrowRight') {
+    slide(1)
+  }
+
+  if (e.key === 'Escape') {
+    close()
+  }
+})
+
 </script>
 
 </body>
 </html>
-
-
